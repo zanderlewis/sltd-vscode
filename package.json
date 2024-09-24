@@ -2,7 +2,7 @@
   "name": "solitude-language",
   "displayName": "Solitude Language",
   "description": "Language pack extension for Solitude",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "publisher": "wolfthedev",
   "engines": {
     "vscode": "^1.93.0"
@@ -21,7 +21,7 @@
       ],
       "grammars": [
           {
-              "language": "solitude",
+              "language": "sltd",
               "scopeName": "source.solitude",
               "path": "./syntaxes/solitude.tmLanguage.json"
           }

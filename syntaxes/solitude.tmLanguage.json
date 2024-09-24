@@ -2,24 +2,24 @@
     "scopeName": "source.solitude",
     "patterns": [
         {
-            "name": "comment.line.solitude",
+            "name": "comment.line",
             "match": "^\\s*\\.\\s.*$"
         },
         {
-            "name": "comment.block.solitude",
+            "name": "comment.block",
             "begin": "^\\s*\\.\\.\\.$",
             "end": "^\\s*\\.\\.\\.$"
         },
         {
-            "name": "keyword.control.solitude",
+            "name": "keyword.control",
             "match": "\\b(var|if|fi|func|cnuf|call|input|while|done|!!|\\{\\}|\\}\\{)\\b"
         },
         {
-            "name": "variable.other.solitude",
+            "name": "variable.other",
             "match": "\\$[a-zA-Z_][a-zA-Z0-9_]*"
         },
         {
-            "name": "string.quoted.double.solitude",
+            "name": "string.quoted.double",
             "begin": "\"",
             "end": "\""
         }
