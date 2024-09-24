@@ -1,0 +1,33 @@
+{
+  "name": "solitude-language",
+  "displayName": "Solitude Language",
+  "description": "Language pack extension for Solitude",
+  "version": "0.0.1",
+  "publisher": "wolfthedev",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Language Packs"
+  ],
+  "contributes": {
+      "languages": [
+          {
+              "id": "sltd",
+              "aliases": ["Solitude", "solitude"],
+              "extensions": [".sltd"],
+              "configuration": "./language-configuration.json"
+          }
+      ],
+      "grammars": [
+          {
+              "language": "solitude",
+              "scopeName": "source.solitude",
+              "path": "./syntaxes/solitude.tmLanguage.json"
+          }
+      ]
+  },
+  "scripts": {
+    "update": "cd ../vscode && npm run update-localization-extension sltd"
+  }
+}
