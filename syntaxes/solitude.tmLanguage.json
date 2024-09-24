@@ -2,28 +2,86 @@
     "scopeName": "source.solitude",
     "patterns": [
         {
-            "name": "comment.line",
+            "name": "comment.line.solitude",
             "match": "^\\s*\\.\\s.*$"
         },
         {
-            "name": "comment.block",
+            "name": "comment.block.solitude",
             "begin": "^\\s*\\.\\.\\.$",
             "end": "^\\s*\\.\\.\\.$"
         },
         {
-            "name": "keyword.control",
+            "name": "keyword.control.solitude",
             "match": "\\b(var|if|fi|func|cnuf|call|input|while|done|!!|\\{\\}|\\}\\{)\\b"
         },
         {
-            "name": "variable.other",
+            "name": "variable.assignment.solitude",
+            "match": "\\bvar\\s+[a-zA-Z_][a-zA-Z0-9_]*\\s*=\\s*[^\\s]+"
+        },
+        {
+            "name": "variable.other.solitude",
             "match": "\\$[a-zA-Z_][a-zA-Z0-9_]*"
         },
         {
-            "name": "string.quoted.double",
+            "name": "string.quoted.double.solitude",
             "begin": "\"",
             "end": "\""
+        },
+        {
+            "name": "function.definition.solitude",
+            "begin": "\\bfunc\\s+[a-zA-Z_][a-zA-Z0-9_]*",
+            "end": "\\bcnuf\\b",
+            "patterns": [
+                {
+                    "include": "#keywords"
+                },
+                {
+                    "include": "#variables"
+                },
+                {
+                    "include": "#strings"
+                }
+            ]
+        },
+        {
+            "name": "function.call.solitude",
+            "match": "\\bcall\\s+[a-zA-Z_][a-zA-Z0-9_]*"
+        },
+        {
+            "name": "input.prompt.solitude",
+            "match": "\\binput\\s+[a-zA-Z_][a-zA-Z0-9_]*\\s*->\\s*.*"
+        },
+        {
+            "name": "ansi.escape.solitude",
+            "match": "\\033\\[[0-9;]*m"
         }
     ],
-    "repository": {},
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.solitude",
+                    "match": "\\b(var|if|fi|func|cnuf|call|input|while|done|!!|\\{\\}|\\}\\{)\\b"
+                }
+            ]
+        },
+        "variables": {
+            "patterns": [
+                {
+                    "name": "variable.other.solitude",
+                    "match": "\\$[a-zA-Z_][a-zA-Z0-9_]*"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.solitude",
+                    "begin": "\"",
+                    "end": "\""
+                }
+            ]
+        }
+    },
     "injections": {}
 }

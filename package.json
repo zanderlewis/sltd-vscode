@@ -2,7 +2,7 @@
   "name": "solitude-language",
   "displayName": "Solitude Language",
   "description": "Language pack extension for Solitude",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "wolfthedev",
   "engines": {
     "vscode": "^1.93.0"
